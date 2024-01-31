@@ -1,0 +1,85 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+header {
+    background: variaveis.$background-gradiente;
+    padding: 2rem;
+    margin-bottom: 5rem;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+
+        .linha {
+            border-top: 1px solid black;
+            width: 80%;
+        }
+
+        ul {
+            display: inline-flex;
+            gap: 2rem;
+
+            li {
+                list-style-type: none;
+            }
+
+            a {
+                text-decoration: none;
+                @include mixins.ff-fs-cl(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria);
+                font-weight: 500;
+                transition: .3s;
+                &:hover {
+                    font-weight: bold;
+                    border-bottom: 3px solid variaveis.$hover-menu;
+                    color: variaveis.$hover-menu;
+                }
+            }
+        }
+    }
+
+    #home {
+        max-width: 1040px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .textos-home {
+            max-width: 464px;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-weight: 400;
+                @include mixins.ff-fs-cl(variaveis.$ft-titulos, 2.625rem, variaveis.$cor-primaria);
+                span {
+                    color: variaveis.$cor-secundaria;
+                }
+            }
+        }
+
+        .btn-main {
+            @include mixins.ff-fs-cl(variaveis.$ft-textos, 1.375rem, #FFFFFF); 
+            width: 280px;
+            height: 66px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            background-color: variaveis.$cor-secundaria;
+            transition: .3s;
+            &:hover {
+                cursor: pointer;
+                background-color: variaveis.$cor-terciaria;
+            }
+        }
+    }
+
+    .img-home {
+        max-width: 474px;
+        img {
+            width: 100%;
+        }
+    }
+}

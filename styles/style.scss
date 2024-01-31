@@ -1,0 +1,12 @@
+// Reset | variáveis | mixins
+@use './abstract/root';
+@use './abstract/variaveis';
+@use './abstract/mixins';
+
+// Modularização
+@use './components/cabecalho';
+@use './components/nosso-espaco';
+@use './components/servicos';
+@use './components/descontos';
+@use './components/contatos';
+@use './components/rodape';
